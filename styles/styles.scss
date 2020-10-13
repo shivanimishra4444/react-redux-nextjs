@@ -1,0 +1,22 @@
+// sass variables 
+$danger:red;
+$white:#fff;
+$raleway:"Raleway";
+$backgroundColor:#3691ad;
+body{
+    padding: 0;
+    margin: 0;
+}
+.container-global {
+    display: flex;
+    justify-content: center;
+    background-color:$backgroundColor; 
+    background: url('../assets/happy-family-camp.png');
+    background-position: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em;
+    &__font-color{
+        color: #fff;
+    }
+}
