@@ -1,4 +1,4 @@
-import {DECREMENT_COUNTER, INCREMENT_COUNTER} from '../actions/counterActions';
+import {DECREMENT_COUNTER, GET_DATA, INCREMENT_COUNTER} from '../actions/counterActions';
 import {HYDRATE} from 'next-redux-wrapper';
 
 
@@ -10,6 +10,12 @@ const counterReducer = (state = {value: 0}, action) => {
             return {...state, value: state.value + 1};
         case DECREMENT_COUNTER:
             return {...state, value: state.value - 1};
+        case GET_DATA:
+            return {
+                ...state,
+                data: action.payload,
+                loading: false,
+            }
         default:
             return {...state};
     }
